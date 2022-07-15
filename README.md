@@ -6,7 +6,7 @@
   
 ---
 > # START CAMP 
----
+
 **< 220714-목요일 >**
 
 ### 1. Markdown 학습
@@ -53,21 +53,33 @@
 - **Git** : 분산 서버 관리 프로그램
 - **Gitlab / Github** : 클라우드 플랫폼
 - **commit** : 버전을 기록하다
+
     1) **GUI** : Graphic user interface 
+
         -> 사용자가 사용하기 편하게 그래픽으로 나타냄. (내 프로그램..) 그래픽을 통해 사용자와 컴퓨터가 상호작용하는 방식
+
     2) **CLI** : Command Line interface 
+
         -> 명령어를 통해 사용자와 컴퓨터가 상호 작용하는 방식
+
           - GUI는 CLI에 비해 사용하기 쉽지만 단계가 많고 컴퓨터의 성능을 더 많이 소모
           - 수 많은 서버/개발 시스템이 CLI를 통한 조작 환경을 제공
 
-- *명령어 종류*
-    - `Touch` : 파일을 생성하는 명령어 (서버의 현재 시간으로 파일의 최근 사용한 시간과 최근 변경 시간을 변경함.)
-    - `MKdir` : Make directory (경로, 폴더 의미) 새 폴더를 생성하는 명령어
-    - `Ls` : list segment 현재 작업 중인 디렉토리의 파일/폴더 목록을 보여주는 명령어
-    - `Cd` : change directory 현재 작업 중인 디렉토리를 변경하는 명령어
-    - `Rm` : remove
-    - `./` : 현재 위치한 곳 의미 (만들지 않아도 이미 있는 것)
-    - `../` : 현재 위치의 상위 폴더 의미 (만들지 않아도 이미 있는 것)
+
+  <*명령어 종류*>
+      - `Touch` : 파일을 생성하는 명령어 (서버의 현재 시간으로 파일의 최근 사용한 시간과 최근 변경 시간을 변경함.)
+  
+      - `MKdir` : Make directory (경로, 폴더 의미) 새 폴더를 생성하는 명령어
+
+      - `Ls` : list segment 현재 작업 중인 디렉토리의 파일/폴더 목록을 보여주는 명령어
+  
+      - `Cd` : change directory 현재 작업 중인 디렉토리를 변경하는 명령어
+
+      - `Rm` : remove
+
+      - `./` : 현재 위치한 곳 의미 (만들지 않아도 이미 있는 것)
+
+      - `../` : 현재 위치의 상위 폴더 의미 (만들지 않아도 이미 있는 것)
 
 - **절대 경로** : 디스크로부터 시작하는 모든 경로 나타낸 것
 - **상대 경로** : 현재 위치한 파일로부터 상대적인 위치 나타낸 것
@@ -77,47 +89,56 @@
 
 ### 3. Git 기본기
 
-  - README.md
-  - 프로젝트에 대한 설명 문서
-  - Github 프로젝트에서 가장 먼저 보는 문서
-  - 일반적으로 소프트웨어와 함께 배포
-  - 일반적으로 마크다운을 이용하여 작성함
-  - `Repository` : 특정 디렉토리를 버전 관리하는 저장소 하나하나 의미
-    - 원격 : github
-    - 로컬 : 내 컴퓨터
+    - README.md
+    - 프로젝트에 대한 설명 문서
+    - Github 프로젝트에서 가장 먼저 보는 문서
+    - 일반적으로 소프트웨어와 함께 배포
+    - 일반적으로 마크다운을 이용하여 작성함
+  
+- `Repository` : 특정 디렉토리를 버전 관리하는 저장소 하나하나 의미
+    > 원격 : github
+    > 로컬 : 내 컴퓨터
     - `git init` 명령어로 로컬 저장소를 생성
     - `.git` 디렉토리에 버전 관리에 필요한 모든 것이 들어있음
     - `initialized` : git을 쓰기 위해 가장 기본적으로 필요한 요소를 초기화하다.
 
-**→  특정버전으로 남긴다 = ‘커밋(commit)한다”**
+>**→  특정버전으로 남긴다 = ‘커밋(commit)한다”**
+>
+>**→  git은 3가지 영역으로 관리한다**
+>
+>  1. **working directory** : 개발자가 실제 작업하는 것, 실제 디렉토리 
+>  2. **staging area** : 커밋으로 남기고 싶은, 특정 버전으로 관리하고 싶은 파일이 있는 곳
+>  3. 
 
-**→  git은 3가지 영역으로 관리한다**
+> **왜 staging area ?**
+> : **나중에 커밋으로 저장됨, working directory의 모습 자체를 남김, 파일 자체가 아닌 수정된 사항인 login/logout 모습으로 남김.** 
 
-  1. **working directory** : 개발자가 실제 작업하는 것, 실제 디렉토리 
-  2. **staging area** : 커밋으로 남기고 싶은, 특정 버전으로 관리하고 싶은 파일이 있는 곳
-  3. 
 
-    >> **왜 staging area ?**
-    : **나중에 커밋으로 저장됨, working directory의 모습 자체를 남김, 파일 자체가 아닌 수정된 사항인 login/logout 모습으로 남김.** 
 
 1)  **Repository** : 커밋들이 저장되는 곳
 
-    —> (1) 초기엔 git이 추적하지 않는 file `(untracked)` 
+ (1) 초기엔 git이 추적하지 않는 file `(untracked)` 
 
-    —> (2) `git add`  하면 staged 상태에 `tracked git`으로 바뀜
+ (2) `git add`  하면 staged 상태에 `tracked git`으로 바뀜
 
-    —> (3) `git commit` 하면 `committed` 으로 바뀜, 특정 버전으로 남기게 되는 것!
+ (3) `git commit` 하면 `committed` 으로 바뀜, 특정 버전으로 남기게 되는 것!
 
     —> 수정된 것도 동일!
 
 - `git add`, `git add .` → <파일명>
+
 - `git commit -m ‘message’` → 해당 버전 입력됨 (버전 알 수 있게 남기는 것)
+
 - `git config —global user.name, [user.email](http://user.email)` → 누구인지 입력
+
 - `git remote add origin {remote_repo}`
+
    - origin : <repo_name> 별명
    - {remote_repo} : url
    - git add와 다름
+
  - `git push` -> upload
+
    - local에서 remote repository에 올려주는 것
 
 ### 4. Remote Repository 연결하기
@@ -135,31 +156,31 @@
 
   1. 새로운 디렉토리 생성:
 
-      1. mkdir (make directory)
-      2. cd (경로)
-      3. git init
-      4. git remote add origin {원격 레포지토리 주소(url)}
+         1. mkdir (make directory)
+         2. cd (경로)
+         3. git init
+         4. git remote add origin {원격 레포지토리 주소(url)}
 
-          -- git remote -v : origin http://www.github : 등록한 Remote Repository 정보 확인
+              -- git remote -v : origin http://www.github : 등록한 Remote Repository 정보 확인
 
-          -- 이때 fetch와 pull은 같은 의미 가짐
+              -- 이때 fetch와 pull은 같은 의미 가짐
 
-         -- pull은 다운로드, push는 업로드 의미
+             -- pull은 다운로드, push는 업로드 의미
 
-      5. git remote : origin 이름으로 remote 추가된 것 확인
-      6. touch README.md
-      7. 내용 수정 (Optional)
+         5. git remote : origin 이름으로 remote 추가된 것 확인
+         6. touch README.md
+         7. 내용 수정 (Optional)
 
       
-  2. 버전 남기기 (remote repository로 push 하기 전에 반드시 Commit이 있어야 한다.)\
+  2. 버전 남기기 (remote repository로 push 하기 전에 반드시 Commit이 있어야 한다.)
 
-      1. git add (파일명.확장자 파일명.확장자 파일명.확장자 파일명.확장자)
-         - git add . 현재 위치한 working directory의 모든 수정 사항
-      2. git commit -m 'first commit'
-      3. git push origin master
-         - git push -u origin master 사용하면 기억하므로, git push만 써도 됨
-      4. git pull origin master : 원격 저장소의 변화 사항을 업데이트
-      5. git clone {git Repository url} : 원격 저장소를 복제 해온다 (원격->로컬) : 다운로드
+            1. git add (파일명.확장자 파일명.확장자 파일명.확장자 파일명.확장자)
+               - git add . 현재 위치한 working directory의 모든 수정 사항
+            2. git commit -m 'first commit'
+            3. git push origin master
+               - git push -u origin master 사용하면 기억하므로, git push만 써도 됨
+            4. git pull origin master : 원격 저장소의 변화 사항을 업데이트
+            5. git clone {git Repository url} : 원격 저장소를 복제 해온다 (원격->로컬) : 다운로드
 
 
 
@@ -178,4 +199,71 @@
 ***
 
 **< 220715-금요일 >**
-### Github 기본법
+> ### Github 기본법
+#  Git 
+
+### 협업 복구 백업
+
+> Git 과 Github 는 다르다 ! 
+>
+> > git은 분산 버전 관리 시스템 ! Github는 git을 통해 이용하는 Cloud 서비스다 ! 
+
+
+### Git 기본 명령어 (로컬 레포지토리)
+
+1. Local Repository를 생성할 때 : `git init`
+2. Working Directory 에 생긴 변화 사항 ( 파일 생성, 삭제, 수정 등... )을 버전으로 관리하고자, Staging Area에 올리는 명령어 : `git add {file.확장자}` 
+   현재 경로를 의미하는 `git add .` : 현재 WD에 생긴 모든 변경 사항을 한번에 Staging Area에 올리는 명령어 
+3. 버전을 기록할 때 , Commit을 남길 때 : `git commit -m '커밋 내용(최대한 상세하게)'`
+4. file의 상태 : 
+   1.  `untracked ` : git 이 아직 관리하고 있지 않다. ( 최초 생성 시)
+   2.  add 명령어를 통해서 Staging Area 올라간 파일 : `Tracked` 
+5. git status : 현재 Local Repository 의 상태를 확인 하는 명령어 (습관처럼 입력해야한다 )
+
+---
+
+### 협업과 복구 및 백업 
+
+   #### 원격 저장소 연결 
+
+      1. github에 원격 저장소를 생성합니다. 
+      2. 로컬 저장소(Repository) 생성합니다. 
+      3. **원격 저장소에 Push 하기 전에 반드시 최소 하나 이상의 Commit을 가져야한다 **
+
+#### 원격 저장소 연결 명령어 
+
+      1. git remote add origin {Repository Url}
+      2. git remote -v : origin http://www.github  : 등록한 Remote Repository 정보 확인
+      3. git push -u origin master : 로컬에서 생긴 커밋 내역을 업로드 
+         - git push
+      4. git pull origin master : 원격 저장소의 변화 사항을 업데이트
+      5. git clone {git Repository Url} : 원격 저장소를 복제 해온다 (원격 -> 로컬) : 다운로드
+
+# 끝말잇기 
+
+### 2인 1조 
+
+### 역할
+
+> 다음 단어를 입력하기 전에 항상 PULL!!!!!
+>
+> **PUSH 전에 항상 PULL 먼저다 ! **
+
+- 조장 : 
+        1. github word-relay 라는 원격 레포지토리 생성 !
+        2. word-relay  로컬 레포지토리 생성 
+        3. README.md 생성 
+        4. 첫번째 단어 입력 
+        5. remote 연결 ! 
+        6. git push 
+        7. 생성한 레포지토리 주소 전달 ! 
+        8. 조원을 Collaborator 초대  
+
+
+- 조원 :
+        1. clone(처음) 또는 pull(이후)
+        2. git remote add origin {remote Url}
+        3. 끝말잇기 단어 입력 ! 저장 ! 
+        4. git add .  git add {파일명.확장자}
+        5. git commit -m '메세지'
+        6. git push origin master
