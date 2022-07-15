@@ -9,19 +9,19 @@
 
 **< 220714-목요일 >**
 
-### 1. Markdown 학습
+## 1. Markdown 학습
  : 텍스트 기반의 가벼운 마크업 언어 → 문서를 구조화하기 위한 목적 (문서의 구조와 내용을 같이 쉽고 빠르게 적고자 탄생) 
 = **개발 문서의 시작과 끝!**
 
         - tag : #, -와 같은 태그를 바탕으로 텍스트를 구조화 할 수 있음.
         - README.md 파일을 통해 Repositoy 설명글 쓸 수 있음. → 오픈 소스의 공식 문서 작성
 
-#### --> *Typora* :  실시간 마크다운 변환 (미리보기) 제공
+### --> *Typora* :  실시간 마크다운 변환 (미리보기) 제공
 
         - 이미지 또는 표 삽입 시 매우 편한 UI 제공함
         - VS code등의 프로그램도 마크다운을 지원하지만 전용 프로그램을 사용하면 더 편하게 사용가능함
     
-#### __< 많이 사용하는 것 >__
+### __< 많이 사용하는 것 >__
       1. 헤딩 (Heading) : 문서의 제목이나 소제목으로 사용
         - #의 개수에 따라 제목의 수준을 구별(h1~h6)
         - 문서 구조의 기본
@@ -47,9 +47,9 @@
 
       7. 수평선
          - - - 3개 사용하면 가로로 긴 수평선 나타남.
- #### ```ctrl / 누르면 원래 코드 볼 수 있음!!```
+ ### ```ctrl / 누르면 원래 코드 볼 수 있음!!```
 
-### 2. GIT 
+## 2. GIT 
 - **Git** : 분산 서버 관리 프로그램
 - **Gitlab / Github** : 클라우드 플랫폼
 - **commit** : 버전을 기록하다
@@ -87,7 +87,7 @@
     > Ex) C:/User/ssafy/Desktop 이거 그대로는 절대 경로임.
     > Ex) 현재 작업하고 있는 디렉토리가 C:/User일 때, 윈도우 바탕 화면으로의 상대 경로는 ssafy/Desktop
 
-### 3. Git 기본기
+## 3. Git 기본기
 
     - README.md
     - 프로젝트에 대한 설명 문서
@@ -115,7 +115,7 @@
 
 
 
-1)  **Repository** : 커밋들이 저장되는 곳
+## 1)  **Repository** : 커밋들이 저장되는 곳
 
  (1) 초기엔 git이 추적하지 않는 file `(untracked)` 
 
@@ -141,25 +141,25 @@
 
    - local에서 remote repository에 올려주는 것
 
-### 4. Remote Repository 연결하기
+## 4. Remote Repository 연결하기
 
-> #### Remote Repo 생성하기
+> ### Remote Repo 생성하기
 
-> ##### Github
+> ### Github
 
-  1. 기본 브랜치 이름 master로 변경하기
-  2. nex Repo 생성 버튼 눌러서
-      1. 이름 설정
-      2. 만들기
+    1. 기본 브랜치 이름 master로 변경하기
+    2. nex Repo 생성 버튼 눌러서
+         1. 이름 설정
+         2. 만들기
 
-> ##### Local
+> ### Local
 
-  1. 새로운 디렉토리 생성:
+   1. 새로운 디렉토리 생성
 
-         1. mkdir (make directory)
-         2. cd (경로)
-         3. git init
-         4. git remote add origin {원격 레포지토리 주소(url)}
+            1. mkdir (make directory)
+            2. cd (경로)
+            3. git init
+            4. git remote add origin {원격 레포지토리 주소(url)}
 
               -- git remote -v : origin http://www.github : 등록한 Remote Repository 정보 확인
 
@@ -167,12 +167,12 @@
 
              -- pull은 다운로드, push는 업로드 의미
 
-         5. git remote : origin 이름으로 remote 추가된 것 확인
-         6. touch README.md
-         7. 내용 수정 (Optional)
+            5. git remote : origin 이름으로 remote 추가된 것 확인
+            6. touch README.md
+            7. 내용 수정 (Optional)
 
       
-  2. 버전 남기기 (remote repository로 push 하기 전에 반드시 Commit이 있어야 한다.)
+  1. 버전 남기기 (remote repository로 push 하기 전에 반드시 Commit이 있어야 한다.)
 
             1. git add (파일명.확장자 파일명.확장자 파일명.확장자 파일명.확장자)
                - git add . 현재 위치한 working directory의 모든 수정 사항
@@ -184,14 +184,14 @@
 
 
 
-#### TIL Remote Repository
+> ## TIL Remote Repository
 
-     1. 원격 레포지토리 생성
-     2. 로컬 레포지토리 생성
-         1. 리드미 파일 만들기
-         2. 내용 기입
-     3. 리모트와 로컬 연결
-     4. Push 명령어로 리드미 파일 업로드
+        1. 원격 레포지토리 생성
+        2. 로컬 레포지토리 생성
+            1. 리드미 파일 만들기
+            2. 내용 기입
+        3. 리모트와 로컬 연결
+        4. Push 명령어로 리드미 파일 업로드
 
 
 
@@ -206,7 +206,7 @@
 
 > Git 과 Github 는 다르다 ! 
 >
-> > git은 분산 버전 관리 시스템 ! Github는 git을 통해 이용하는 Cloud 서비스다 ! 
+> git은 분산 버전 관리 시스템 ! Github는 git을 통해 이용하는 Cloud 서비스다 ! 
 
 
 ### Git 기본 명령어 (로컬 레포지토리)
@@ -249,21 +249,21 @@
 >
 > **PUSH 전에 항상 PULL 먼저다 ! **
 
-- 조장 : 
-        1. github word-relay 라는 원격 레포지토리 생성 !
-        2. word-relay  로컬 레포지토리 생성 
-        3. README.md 생성 
-        4. 첫번째 단어 입력 
-        5. remote 연결 ! 
-        6. git push 
-        7. 생성한 레포지토리 주소 전달 ! 
-        8. 조원을 Collaborator 초대  
+  < 조장 >
+```  1. github word-relay 라는 원격 레포지토리 생성 !```
+ ``` 2. word-relay  로컬 레포지토리 생성 ```
+ ``` 3. README.md 생성 ```
+ ``` 4. 첫번째 단어 입력 ```
+  ```5. remote 연결 ! ```
+  ```6. git push```
+  ```7. 생성한 레포지토리 주소 전달 !```
+  ```8. 조원을 Collaborator 초대  ```
 
 
-- 조원 :
-        1. clone(처음) 또는 pull(이후)
-        2. git remote add origin {remote Url}
-        3. 끝말잇기 단어 입력 ! 저장 ! 
-        4. git add .  git add {파일명.확장자}
-        5. git commit -m '메세지'
-        6. git push origin master
+  < 조원 >
+ ```1. clone(처음) 또는 pull(이후)```
+ ```2. git remote add origin {remote Url}```
+``` 3. 끝말잇기 단어 입력 ! 저장 ! ```
+``` 4. git add .  git add {파일명.확장자}```
+ ```5. git commit -m '메세지'```
+``` 6. git push origin master```
